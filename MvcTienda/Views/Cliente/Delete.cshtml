@@ -6,23 +6,43 @@
 
 <h3>¿Estás seguro de que quieres eliminar este Cliente</h3>
 <div>
+    <br />
     <h4>Cliente</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-4">
             @Html.DisplayNameFor(model => model.Nombres)
         </dt>
-        <dd class = "col-sm-10">
+        <dt class="col-sm-8">
+            @Html.DisplayFor(model => model.Nombres)
+        </dt>
+        <br />
+         <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </dt>
+        <dt class = "col-sm-8">
             @Html.DisplayFor(model => model.Apellidos)
-        </dd>
-        <dt class = "col-sm-2">
+        </dt>
+        <br />
+        <dt class="col-sm-4">
             @Html.DisplayNameFor(model => model.Telefono)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Direccion)
+        <dt class="col-sm-8">
+            @Html.DisplayFor(model => model.Telefono)
+        </dt>
+        <br />
+        <dd class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Direccion)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-8">
+            @Html.DisplayFor(model => model.Direccion)
+        </dt>
+        <br />
+        <dd class = "col-sm-4">
             @Html.DisplayNameFor(model => model.Correo)
+        </dd>
+        <dt class = "col-sm-8">
+            @Html.DisplayFor(model => model.Correo)
         </dt>
     </dl>
 
