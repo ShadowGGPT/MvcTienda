@@ -1,0 +1,51 @@
+﻿@model MvcTienda.Models.Marca;
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Editar Marca</h1>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <a asp-action="Index" aria-hidden="true">X</a>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="IdMarca" value=@Model.IdMarca>
+                    <input type="hidden" value="0" id="txtId">
+                    <div class="col-sm-8">
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <label asp-for="Nombre" class=""></label>
+                                <input asp-for="Nombre" class="form-control" />
+                                <span asp-validation-for="Nombre" class="text-danger"></span>
+                                <br />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <label asp-for="UrlFoto" class=""></label>
+                                <input asp-for="UrlFoto" class="form-control" />
+                                <span asp-validation-for="UrlFoto" class="text-danger"></span>
+                                <br />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <input type="submit" value="Guardar" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

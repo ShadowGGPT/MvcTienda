@@ -1,0 +1,72 @@
+﻿@model MvcTienda.Models.Proveedor;
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Crear Proveedor</h1>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <a asp-action="Index" aria-hidden="true">X</a>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" value="0" id="txtId">
+                    <div class="col-sm-8">
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <label asp-for="NombreFoto" class=""></label>
+                                <input asp-for="NombreFoto" class="form-control" />
+                                <span asp-validation-for="NombreFoto" class="text-danger"></span>
+                                <br />
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label asp-for="Telefono" class=""></label>
+                                <input asp-for="Telefono" class="form-control" />
+                                <span asp-validation-for="Telefono" class="text-danger"></span>
+                                <br />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-8">
+                                <label asp-for="Correo" class=""></label>
+                                <input asp-for="Correo" class="form-control" />
+                                <span asp-validation-for="Compras" class="text-danger"></span>
+                                <br />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <label asp-for="Direccion" class=""></label>
+                                <input asp-for="Direccion" class="form-control" />
+                                <span asp-validation-for="Direccion" class="text-danger"></span>
+                                <br />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <label asp-for="Descripcion" class=""></label>
+                                <input asp-for="Descripcion" class="form-control" />
+                                <span asp-validation-for="Descripcion" class="text-danger"></span>
+                                <br />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <input type="submit" value="Guardar" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

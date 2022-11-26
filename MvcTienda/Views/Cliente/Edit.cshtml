@@ -1,0 +1,73 @@
+﻿@model MvcTienda.Models.Cliente;
+@{
+    ViewData["Title"] = "Editar Cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Editar Cliente</h1>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <a asp-action="Index" aria-hidden="true">X</a>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="IdCliente" value=@Model.IdCliente>
+                    <div class="col-sm-8">
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <label asp-for="Nombres" class=""></label>
+                                <input asp-for="Nombres" class="form-control"/>
+                                <span asp-validation-for="Nombres" class="text-danger"></span>
+                                <br />
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label asp-for="Apellidos" class=""></label>
+                                <input asp-for="Apellidos" class="form-control" />
+                                <span asp-validation-for="Apellidos" class="text-danger"></span>
+                                <br />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <label asp-for="Telefono" class=""></label>
+                                <input asp-for="Telefono" class="form-control" />
+                                <span asp-validation-for="Telefono" class="text-danger"></span>
+                                <br />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <label asp-for="Direccion" class=""></label>
+                                <input asp-for="Direccion" class="form-control" />
+                                <span asp-validation-for="Direccion" class="text-danger"></span>
+                                <br />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <label asp-for="Correo" class=""></label>
+                                <input asp-for="Correo" class="form-control" />
+                                <span asp-validation-for="Correo" class="text-danger"></span>
+                                <br />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <input type="submit" value="Guardar" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
